@@ -4,7 +4,10 @@
   "description": "",
   "keywords": [],
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "generate:types": "npm run generate:idl; npm run generate:ts",
+    "generate:idl": "didc bind ./src/ledger/ledger.did -t js > src/ledger/ledger.did.js",
+    "generate:ts": "didc bind ./src/ledger/ledger.did -t ts > src/ledger/ledger.did.d.ts"    
   },
   "devDependencies": {
     "@dfinity/agent": "",

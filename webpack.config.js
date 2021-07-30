@@ -84,6 +84,11 @@ function generateWebpackConfigForCanister(name, info) {
         Buffer: [require.resolve('buffer/'), 'Buffer'],
         process: require.resolve('process/browser'),
       }),
+      // webpack.config.js
+      new webpack.EnvironmentPlugin({
+        NODE_ENV: 'development',
+        IDENTITY_CANISTER_ID: "ryjl3-tyaaa-aaaaa-aaaba-cai" // production Internet Identity canister
+      }),      
     ],
   };
 }

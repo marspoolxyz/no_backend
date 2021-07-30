@@ -1,13 +1,6 @@
 {
   "canisters": {
-    "no_backend": {
-      "main": "src/no_backend/main.mo",
-      "type": "motoko"
-    },
     "no_backend_assets": {
-      "dependencies": [
-        "no_backend"
-      ],
       "frontend": {
         "entrypoint": "src/no_backend_assets/src/index.html"
       },
