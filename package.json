@@ -7,10 +7,10 @@
     "build": "webpack",
     "generate:types": "npm run generate:idl; npm run generate:ts",
     "generate:idl": "didc bind ./src/ledger/ledger.did -t js > src/ledger/ledger.did.js",
-    "generate:ts": "didc bind ./src/ledger/ledger.did -t ts > src/ledger/ledger.did.d.ts"    
+    "generate:ts": "didc bind ./src/ledger/ledger.did -t ts > src/ledger/ledger.did.d.ts"
   },
   "devDependencies": {
-    "@dfinity/agent": "",
+    "@dfinity/agent": "^0.8.9",
     "assert": "2.0.0",
     "buffer": "6.0.3",
     "events": "3.3.0",
@@ -21,5 +21,8 @@
     "util": "0.12.3",
     "webpack": "5.24.4",
     "webpack-cli": "4.5.0"
+  },
+  "dependencies": {
+    "@dfinity/principal": "^0.9.2"
   }
 }
